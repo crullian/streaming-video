@@ -1,0 +1,8 @@
+body {
+  margin: 30px 120px;
+  background-color: #000;
+}
+
+#videoPlayer {
+  width: 100%;
+}
