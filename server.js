@@ -24,7 +24,7 @@ app.get('/video', function(req, res) {
       : fileSize-1
 
     const chunksize = (end-start)+1
-    const file = fs.createReadStream(path, {start, end})
+    const file = fs.createReadStream(path, {start: start, end: end})
     const head = {
       'Content-Range': `bytes ${start}-${end}/${fileSize}`,
       'Accept-Ranges': 'bytes',
