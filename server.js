@@ -29,7 +29,7 @@ app.get('/video', function(req, res) {
       'Content-Range': `bytes ${start}-${end}/${fileSize}`,
       'Accept-Ranges': 'bytes',
       'Content-Length': chunksize,
-      'Content-Type': 'video/mp4',
+      'Content-Type': 'video/mp4'
     }
 
     res.writeHead(206, head)
@@ -38,7 +38,7 @@ app.get('/video', function(req, res) {
     console.log('IN ELSE')
     const head = {
       'Content-Length': fileSize,
-      'Content-Type': 'video/mp4',
+      'Content-Type': 'video/mp4'
     }
     res.writeHead(200, head)
     fs.createReadStream(path).pipe(res)
